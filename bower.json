@@ -1,0 +1,15 @@
+{
+  "name": "debxit-gulp",
+  "description": "",
+  "main": "script.js",
+  "authors": [
+    "Debxit <debxit@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "jquery": "2.*",
+    "slick-carousel": "*",
+    "fontawesome": "4.*"
+  }
+}

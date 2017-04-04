@@ -1,0 +1,67 @@
+.banners{
+  height: 100vh;
+
+  .slide{
+    height: 100vh;
+    width:100vw;
+    position: relative;
+
+    &__title{
+      font-size: 5rem;
+      width: 50%;
+      position: relative;
+      top:5%;
+      left:0;
+    }
+
+    &--green{
+      background: $green url("../img/green-car.png") center right no-repeat;
+      //background-size: contain;
+    }
+    &--red{
+      background: $red url("../img/red-car.png") center right no-repeat;
+      //background-size: contain;
+    }
+    &--gray{
+      background: $gray url("../img/gray-car.png") center right no-repeat;
+      //background-size: contain;
+    }
+    &--lilac{
+      background: $lilac url("../img/lilac-car.png") center right no-repeat;
+      //background-size: contain;
+    }
+  }
+}
+
+.main-slider{
+  .slick-dots{
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    li{
+      display: inline-block;
+      margin: 0 10px;
+      button{
+        border: transparent;
+        border-radius: 50%;
+        background: transparent;
+        font-size: 2rem;
+        font-weight: 300;
+        width:40px;
+        height:40px;
+        font-family: $font-main;
+        text-align: center;
+
+        &:active,&:focus{
+          outline: none;
+        }
+      }
+      &.slick-active{
+        button{
+          color: #fff;
+          border: solid 1px #fff;
+        }
+      }
+    }
+  }
+}

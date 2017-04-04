@@ -1,0 +1,55 @@
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1rem;
+	font-family: $font-main;
+	margin:0;
+	color: $dark-gray;
+}
+
+input {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+textarea {
+	resize: none;
+}
+.container{
+	width: 1370px;
+	display: block;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing:border-box;
+
+	@include screen-xl(){
+		width:1170px;
+	}
+	@include screen-lg(){
+		width:990px;
+	}
+	@include screen-md(){
+		width:770px;
+	}
+	@include screen-sm(){
+		width:100%;
+	}
+}
+section{
+	//&:first-child{
+	//	padding-top: 115px;
+	//	@include screen-xl() {
+	//		padding-top: 85px;
+	//	}
+	//}
+	box-sizing:border-box;
+}
+::selection {
+	background-color: initial;
+}
+
+.--white{
+	color: #fff;
+}
