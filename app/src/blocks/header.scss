@@ -1,11 +1,11 @@
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   height: 115px;
   width: 100%;
-  padding:35px 0;
+  padding: 35px 0;
   box-sizing: border-box;
 
   @include screen-xl() {
@@ -13,23 +13,23 @@
     padding: 10px 0;
   }
 
-  .container{
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-&-header{
-  @include screen-sm(){
-    width: 100%;
-    text-align: center;
+  &-header {
+    @include screen-sm() {
+      width: 100%;
+      text-align: center;
+    }
   }
-}
-  &-collapse{
+  &-collapse {
     width: 60%;
     @include screen-md() {
       width: 75%;
     }
-    @include screen-sm(){
+    @include screen-sm() {
       display: block;
       position: absolute;
       top: 75px;
@@ -37,22 +37,21 @@
       width: 45%;
       transform: translateX(-90%);
       transition: transform .4s ease;
-      &.open{
+      &.open {
         transform: translateX(0);
       }
     }
   }
 }
 
-.logo{
-  img{
+.logo {
+  img {
     height: 65px;
-    @include screen-md(){
+    @include screen-md() {
       height: 45px;
     }
   }
 }
-
 
 .nav {
   padding: 0;
@@ -64,17 +63,17 @@
   width: 100%;
   transition: transform .4s ease-out;
 
-  @include screen-sm(){
-  flex-wrap: wrap;
+  @include screen-sm() {
+    flex-wrap: wrap;
   }
 
   &__item {
     display: inline-block;
 
-    @include screen-sm(){
-     width: 100%;
+    @include screen-sm() {
+      width: 100%;
       padding: 10px 0;
-     padding-left: 25px;
+      padding-left: 25px;
     }
 
     &.active {
@@ -95,6 +94,7 @@
 
   &__link {
     font-family: $font-main;
+    padding: 10px 0;
     font-size: 1.8rem;
     font-weight: 300;
     color: $dark-gray;
@@ -117,7 +117,7 @@
     &:hover {
       &:after {
         opacity: 1;
-        transform: translateY(5px);
+        transform: translateY(0px);
 
       }
     }
@@ -138,8 +138,8 @@
     cursor: pointer;
   }
 
-  &:focus{
-  outline: none;
+  &:focus {
+    outline: none;
   }
   &:active {
     outline: none;
@@ -153,14 +153,18 @@
     height: 3px;
     background: $dark-gray;
     position: relative;
-    //transition: background linear .2s;
+    /* autoprefixer: off */
+    transition: background linear .1s;
+    transition-delay: .3s;
 
     &:before {
       top: -10px;
+      /* autoprefixer: off */
       transition-property: top, transform;
     }
     &:after {
       bottom: -10px;
+      /* autoprefixer: off */
       transition-property: bottom, transform;
     }
     &:before, &:after {
@@ -169,8 +173,9 @@
       left: 0;
       width: 100%;
       height: 3px;
-      background-color:  $dark-gray;
+      background-color: $dark-gray;
       content: "";
+      /* autoprefixer: off */
       transition-duration: .3s, .3s;
       transition-delay: .2s, .0s;
     }
@@ -179,6 +184,7 @@
   &.is-active {
     span {
       background: transparent;
+      /* autoprefixer: off */
       transition-delay: .3s;
 
       &:before {
@@ -190,12 +196,13 @@
         transform: rotate(-45deg);
       }
       &:before, &:after {
+        /* autoprefixer: off */
         transition-delay: .0s, .2s;
       }
     }
   }
 
-  @include screen-sm(){
+  @include screen-sm() {
     display: block;
   }
 }

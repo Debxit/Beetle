@@ -6,29 +6,42 @@
     width:100vw;
     position: relative;
 
+    .text-wrap{
+      width: 55%;
+      position: relative;
+      margin-top: 17%;
+
+      &.--right{
+        float: right;
+        text-align: right;
+      }
+
+    }
     &__title{
       font-size: 5rem;
-      width: 50%;
-      position: relative;
-      top:5%;
-      left:0;
+      line-height: 7rem;
+      color: $dark-gray;
     }
 
     &--green{
-      background: $green url("../img/green-car.png") center right no-repeat;
+      background: $green url("../img/green-car.png") 60% 65%  no-repeat;
       //background-size: contain;
+      color: $green;
     }
     &--red{
-      background: $red url("../img/red-car.png") center right no-repeat;
+      background: $red url("../img/red-car.png") 7% 73%  no-repeat;
       //background-size: contain;
+      color: $red;
     }
     &--gray{
-      background: $gray url("../img/gray-car.png") center right no-repeat;
+      background: $gray url("../img/gray-car.png") 65% 73%  no-repeat;
       //background-size: contain;
+      color: $gray;
     }
     &--lilac{
-      background: $lilac url("../img/lilac-car.png") center right no-repeat;
+      background: $lilac url("../img/lilac-car.png") -114% 88%   no-repeat;
       //background-size: contain;
+      color: $lilac;
     }
   }
 }
@@ -38,6 +51,7 @@
     list-style: none;
     position: absolute;
     bottom: 0;
+    left: 40%;
     li{
       display: inline-block;
       margin: 0 10px;
