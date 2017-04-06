@@ -1,5 +1,6 @@
 .navbar {
-  position: fixed;
+  //position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
@@ -44,14 +45,6 @@
   }
 }
 
-.logo {
-  img {
-    height: 65px;
-    @include screen-md() {
-      height: 45px;
-    }
-  }
-}
 
 .nav {
   padding: 0;
@@ -96,9 +89,6 @@
     font-family: $font-main;
     padding: 10px 0;
     font-size: 1.8rem;
-    font-weight: 300;
-    color: $dark-gray;
-    text-decoration: none;
     position: relative;
 
     &:after {

@@ -1,0 +1,118 @@
+.contacts-section{
+  position: relative;
+  padding: 45px 0;
+  text-align: right;
+
+}
+.contacts{
+  position: absolute;
+  left:0;
+  top:10%;
+  text-align: left;
+  font-size: 16px;
+  &__title{
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__text{
+    color: $font-light-gray;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+#map {
+  width: 60vw;
+  height: 500px;
+  display: inline-block;
+}
+
+#map__content {
+  margin: 25px;
+}
+
+.callback-form {
+  position: absolute;
+  z-index: 2;
+  max-width: 350px;
+  padding: 35px 40px;
+  top: 10%;
+  right: 25px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
+
+  .btn{
+    margin-top: 40px;
+    border-color: $dark-gray;
+    color: $dark-gray;
+    background: transparent;
+    min-width: 240px;
+    font-size:16px;
+    .arrow{
+      height: 16px;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+
+    .arrow {
+      svg{
+        stroke: $dark-gray;
+      }
+    }
+  }
+  @include screen-sm() {
+    top: 15%;
+  }
+  @include screen-xs() {
+    position: static;
+    width: 100%;
+    margin: 20px auto;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .main-form {
+
+    .form-item {
+      position: relative;
+      overflow: hidden;
+    }
+    label {
+      position: absolute;
+      bottom: 8px;
+      left: 2px;
+      color: $font-light-gray;
+      z-index: 0;
+      font-size: 15px;
+      transition: transform 0.3s;
+      transform: translateX(0);
+    }
+
+    input, textarea {
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      margin-top: 10px;
+      min-height: 40px;
+      font-size: 16px;
+      border: none;
+      border-bottom: solid 1px $light-gray;
+      &:valid + label {
+        transform: translateX(-200px);
+      }
+      &:focus + label {
+        transform: translateX(-200px);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  textarea {
+    margin-top: 20px;
+  }
+}

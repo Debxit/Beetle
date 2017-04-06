@@ -1,77 +1,171 @@
-.banners{
+.banners {
   height: 100vh;
 
-  .slide{
+  .slide {
     height: 100vh;
-    width:100vw;
+    width: 100vw;
     position: relative;
 
-    .text-wrap{
+    .text-wrap {
       width: 55%;
       position: relative;
       margin-top: 17%;
 
-      &.--right{
+      @include screen-xl() {
+        margin-top: 14%;
+      }
+
+      @include screen-lg() {
+        width:80%;
+      }
+
+      @include screen-sm() {
+        margin-top: 115px;
+
+      }
+      @include screen-xs() {
+      width: 100%
+      }
+
+
+      &.--right {
         float: right;
         text-align: right;
       }
 
     }
-    &__title{
+    &__title {
       font-size: 5rem;
       line-height: 7rem;
       color: $dark-gray;
+
+      @include screen-xl() {
+        font-size: 4rem;
+        line-height: 5rem;
+      }
+      @include screen-sm() {
+        font-size:3rem;
+        line-height:4rem;
+      }
     }
 
-    &--green{
-      background: $green url("../img/green-car.png") 60% 65%  no-repeat;
+    &--green {
+      background: $green url("../img/green-car.png") 60% 65% no-repeat;
       //background-size: contain;
       color: $green;
+      @include screen-xl() {
+        background: $green url("../img/green-car.png") -19% 65% no-repeat;
+      }
+      @include screen-md() {
+        background: $green url("../img/green-car.png") 22% 65% no-repeat;
+      }
+
+
+      @include screen-sm() {
+        background:$green url("../img/green-car.png") 0 100% no-repeat;
+        background-size: contain;
+      }
+
+      .btn:hover {
+        svg {
+          stroke: $green;
+        }
+      }
     }
-    &--red{
-      background: $red url("../img/red-car.png") 7% 73%  no-repeat;
+    &--red {
+      background: $red url("../img/red-car.png") 7% 73% no-repeat;
       //background-size: contain;
       color: $red;
+      @include screen-xl() {
+        background: $red url("../img/red-car.png") 104% 62% no-repeat;
+      }
+      @include screen-md() {
+        background: $red url("../img/red-car.png") 85% 88% no-repeat;
+      }
+
+      @include screen-sm() {
+        background: $red url("../img/red-car.png") 0 80% no-repeat;
+        background-size: contain;
+      }
+
+      .btn:hover {
+        svg {
+          stroke: $red;
+        }
+      }
     }
-    &--gray{
-      background: $gray url("../img/gray-car.png") 65% 73%  no-repeat;
+    &--gray {
+      background: $gray url("../img/gray-car.png") 65% 73% no-repeat;
       //background-size: contain;
       color: $gray;
+      @include screen-xl() {
+        background: $gray url(../img/gray-car.png) 240px 73% no-repeat;
+      }
+      @include screen-sm() {
+        background: $gray url(../img/gray-car.png) 0 80% no-repeat;
+        background-size: contain;
+      }
+      .btn:hover {
+        svg {
+          stroke: $gray;
+        }
+      }
     }
-    &--lilac{
-      background: $lilac url("../img/lilac-car.png") -114% 88%   no-repeat;
+    &--lilac {
+      background: $lilac url("../img/lilac-car.png") -114% 88% no-repeat;
       //background-size: contain;
       color: $lilac;
+
+      @include screen-xl() {
+        background: $lilac url("../img/lilac-car.png") 13% 62% no-repeat;
+      }
+      @include screen-md() {
+        background: $lilac url("../img/lilac-car.png") 32% 62% no-repeat;
+      }
+      @include screen-sm() {
+        background:$lilac url("../img/lilac-car.png") 0 100% no-repeat;
+        background-size: contain;
+      }
+
+      .btn:hover {
+        svg {
+          stroke: $lilac;
+        }
+      }
     }
   }
 }
 
-.main-slider{
-  .slick-dots{
+.main-slider {
+  .slick-dots {
     list-style: none;
     position: absolute;
+    padding: 0;
     bottom: 0;
-    left: 40%;
-    li{
+    left: 45%;
+    @include  screen-sm(){
+      left:15px;
+    }
+    li {
       display: inline-block;
       margin: 0 10px;
-      button{
+      button {
         border: transparent;
         border-radius: 50%;
         background: transparent;
         font-size: 2rem;
         font-weight: 300;
-        width:40px;
-        height:40px;
+        width: 40px;
+        height: 40px;
         font-family: $font-main;
         text-align: center;
 
-        &:active,&:focus{
+        &:active, &:focus {
           outline: none;
         }
       }
-      &.slick-active{
-        button{
+      &.slick-active {
+        button {
           color: #fff;
           border: solid 1px #fff;
         }

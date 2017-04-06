@@ -1,0 +1,67 @@
+.history-section {
+  padding: 110px 0;
+
+  @include  screen-xl(){
+    padding: 50px 0;
+  }
+
+
+  .info {
+    text-align: center;
+  }
+
+  .ages-wrap {
+    margin: 40px 0;
+    display: flex;
+
+    @include  screen-sm(){
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .ages-block {
+    width: 25%;
+    font-size: 14px;
+    text-align: center;
+    padding: 2em;
+    transition: background .2s ease;
+    box-sizing: border-box;
+
+    @include  screen-sm(){
+      width: 50%;
+    }
+
+
+    &__year {
+      font-size: 6vw;
+      font-weight: 700;
+      color: $light-gray;
+      transition: color .3s ease;
+
+    }
+
+    &__descr {
+      color: #fff;
+      transition:color.3s ease-out, transform .3s ease;
+      transform: translateY(15px);
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2em;
+    
+    }
+
+    &:hover {
+      background: $dark-gray;
+      &__year {
+        color: $ultra-light-gray;
+      }
+      &__descr {
+        color: $ultra-light-gray;
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+

@@ -1,19 +1,495 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	@@include('partials/head.html')
-	<title>Document</title>
+    @@include('partials/head.html')
+    <title>Document</title>
 </head>
 <body>
 
 @@include('partials/header.html')
 
-	<main class="main">
-		@@include('partials/banners.html')
-		@@include('partials/services.html')
-	</main>
+<main class="main">
+    @@include('partials/banners.html')
+
+
+    <section class="services-section">
+        <div class="container">
+            <div class="services-wrap">
+
+                <div class="info">
+                    <div class="info__about">
+                        Услуги
+                    </div>
+                    <div class="info__title">
+                        Подбор и доставка
+                    </div>
+                    <a href="" class="info__link">
+                        ВСЕ УСЛУГИ
+                        <span class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                            <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                        </svg>
+                    </span>
+                    </a>
+                </div>
+
+                <div class="service-block">
+                    <a href="" class="service-block__link">
+                <span class="service-block__img">
+                    <img src="img/accessories.png" alt="">
+                </span>
+                        <div class="service-block__title">
+                            аксессуары
+                        </div>
+                    </a>
+                </div>
+                <div class="service-block">
+                    <a href="" class="service-block__link">
+                <span class="service-block__img">
+                    <img src="img/discs.png" alt="">
+                </span>
+                        <div class="service-block__title">
+                            Литые диски
+                        </div>
+                    </a>
+                </div>
+                <div class="service-block">
+                    <a href="" class="service-block__link">
+                <span class="service-block__img">
+                    <img src="img/spares.png" alt="">
+                </span>
+                        <div class="service-block__title">
+                            запчасти
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-slider">
+            <div class="blog-item --r">
+                <div class="blog-item__img "  style="background: #52c0ef  url('../img/blue-car.png') center/contain no-repeat">
+
+                </div>
+                <div class="blog-item__info">
+                    <div class="info">
+                        <div class="info__about">
+                            Блог
+                        </div>
+                        <div class="info__title">
+                            Топ-15 фактов о легендарном
+                            автомобиле Volkswagen Beetle
+                        </div>
+                        <div class="info__text">
+                            Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
+                        </div>
+                        <a href="" class="info__link">
+                            ЧИТАТЬ ДАЛЕЕ
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                                    <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                                </svg>
+                           </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-item --l">
+                <div class="blog-item__img"   style="background: #a6d457  url('../img/blog2.jpg') center/cover no-repeat">
+                    <!--<img src="img/blue-car.png" alt="">-->
+                </div>
+                <div class="blog-item__info">
+                    <div class="info">
+                        <div class="info__about">
+                            Блог
+                        </div>
+                        <div class="info__title">
+                            Самый массовый автомобиль
+                            в истории
+                        </div>
+                        <div class="info__text">
+                            Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
+                        </div>
+                        <a href="" class="info__link">
+                            ЧИТАТЬ ДАЛЕЕ
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                                    <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                                </svg>
+                           </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-item --r">
+                <div class="blog-item__img "  style="background: #e2e2e2  url('../img/blog3.jpg') center/cover no-repeat">
+
+                </div>
+                <div class="blog-item__info">
+                    <div class="info">
+                        <div class="info__about">
+                            Блог
+                        </div>
+                        <div class="info__title">
+                            Недостатки конструкции
+                        </div>
+                        <div class="info__text">
+                            Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
+                        </div>
+                        <a href="" class="info__link">
+                            ЧИТАТЬ ДАЛЕЕ
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                                    <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                                </svg>
+                           </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-item --l">
+                <div class="blog-item__img"   style="background: #c5c8cb url('../img/blog4.jpg') center/cover no-repeat">
+
+                </div>
+                <div class="blog-item__info">
+                    <div class="info">
+                        <div class="info__about">
+                            Блог
+                        </div>
+                        <div class="info__title">
+                            Большая история маленького
+                            «Жука»
+                        </div>
+                        <div class="info__text">
+                            Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
+                        </div>
+                        <a href="" class="info__link">
+                            ЧИТАТЬ ДАЛЕЕ
+                            <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                                    <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                                </svg>
+                           </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="blog-slider-nav">
+            <div class="blog-slider-nav__prev"><img src="img/left-ar.svg" alt=""></div>
+            <div class="blog-slider-nav__index"><span class="current">01</span>/<span class="all"></span></div>
+            <div class="blog-slider-nav__next"><img src="img/right-ar.svg" alt=""></div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="info">
+            <div class="info__about">
+                История
+            </div>
+            <div class="info__title">
+                История автомобиля Volkswagen Beetle
+            </div>
+            <a href="" class="info__link">
+                СМОТРЕТЬ ИСТОРИЮ
+                <span class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                            <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                        </svg>
+                    </span>
+            </a>
+        </div>
+
+        <div class="ages-wrap">
+            <a href="history.html" class="ages-block">
+                <div class="ages-block__year">1938</div>
+                <div class="ages-block__descr">Автомобиль Гитлера и Порше</div>
+            </a>
+            <a href="history.html" class="ages-block">
+                <div class="ages-block__year">1998</div>
+                <div class="ages-block__descr">Volkswagen New Beetle</div>
+            </a>
+            <a href="history.html" class="ages-block">
+                <div class="ages-block__year">2011</div>
+                <div class="ages-block__descr">Volkswagen Beetle (A5)</div>
+            </a>
+            <a href="history.html" class="ages-block">
+                <div class="ages-block__year">2014</div>
+                <div class="ages-block__descr">Volkswagen Beetle Dune</div>
+            </a>
+
+        </div>
+    </section>
+
+    <section class="contacts-section">
+            <div class="container">
+                <div class="contacts">
+                    <div class="info">
+                        <div class="info__about">
+                            Контакты
+                        </div>
+                        <div class="info__title">
+                            Beetle
+                        </div>
+                        <div class="contacts__title">Адрес:</div>
+                        <div class="contacts__text">г. Санкт-Петербург, Гаккелевская 21А </div>
+                        <div class="contacts__title">Телефон:</div>
+                        <div class="contacts__text">+7 (812) 954-02-23</div>
+                        <div class="contacts__title">E-mail:</div>
+                        <div class="contacts__text">support@beetle.pro</div>
+                    </div>
+                </div>
+            </div>
+        <div id="map">
+        </div>
+        <script>
+            function initMap() {
+                var customMapType = new google.maps.StyledMapType([
+
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#dadada"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.line",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#eeeeee"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#c9c9c9"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    }
+
+
+                ], {
+                    name: 'Millenium'
+                });
+                var customMapTypeId = 'custom_style';
+                var warehouse = {lat: 59.999921, lng: 30.256418};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 14,
+                    center: warehouse,
+                    mapTypeControlOptions: {
+                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+                    }
+                });
+
+                map.mapTypes.set(customMapTypeId, customMapType);
+                map.setMapTypeId(customMapTypeId);
+
+
+                var contentString = '<div id="map__content">' +
+                        '<div id="siteNotice">' +
+                        '</div>' +
+                        '<h1 id="firstHeading" class="firstHeading">Beetle</h1>' +
+                        '<div id="bodyContent">' +
+                        'г. Санкт-Петербург<br/>Гаккелевская 21А<br/>+7 (812) 954-02-23<br/>support@beetle.pro' +
+                        '</div>' +
+                        '</div>';
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString,
+                    maxWidth: 270
+                });
+                var image = 'img/marker.png';
+                var marker = new google.maps.Marker({
+                    position: warehouse,
+                    map: map,
+                    icon: image,
+                    title: 'Millenium'
+                });
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                });
+            }
+        </script>
+
+        <div class="callback-form">
+            <div class="callback-form__title">
+                Обратная связь
+            </div>
+            <form class="main-form" id="application" action="application.php" method="POST" name="application">
+                <div class="form-item">
+                    <input name="name" id="Name" maxlength="20" required/>
+                    <label for="Name">Имя</label>
+                </div>
+                <div class="form-item">
+                    <input class="form-item" name="telephone" type="Tel" id="Phone" maxlength="20" required/>
+                    <label for="Phone">Телефон</label>
+                </div>
+                <div class="form-item">
+                    <textarea class="form-item" name="message" id="Message" cols="30" rows="3" required></textarea>
+                    <label for="Message">Сообщение</label>
+                </div>
+                <button class="btn" type="submit" form="application">отправить   <span class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                            <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                        </svg>
+                    </span></button>
+
+            </form>
+        </div>
+
+    </section>
+
+</main>
 
 @@include('partials/footer.html')
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap"
+        async defer>
+</script>
 </body>
 </html>
