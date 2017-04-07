@@ -1,113 +1,122 @@
-.blog-item{
+.blog-item {
   position: relative;
   height: 550px;
   outline: none;
 
-  @include  screen-sm(){
+  @include screen-sm() {
     height: auto;
   }
-  &__img{
+  &__img {
     height: 100%;
-    width:70%;
+    width: 70%;
     position: absolute;
-    top:0;
-    @include  screen-lg(){
-      width:55%;
+    top: 0;
+    @include screen-lg() {
+      width: 55%;
     }
-    @include  screen-sm(){
+    @include screen-sm() {
       position: relative;
       height: 200px;
-      width:100%;
+      width: 100%;
     }
 
   }
 
-  &__info{
+  &__info {
     background: #fff;
     box-sizing: border-box;
-    padding:45px 65px;
+    padding: 45px 65px;
     width: 37%;
     position: absolute;
-    top:10%;
+    top: 10%;
 
-    @include  screen-xl(){
+    @include screen-xl() {
       padding: 20px 35px;
     }
-    @include  screen-lg(){
+    @include screen-lg() {
       width: 65%;
     }
-    @include  screen-sm(){
+    @include screen-sm() {
       width: 95%;
       position: relative;
-      margin:0 auto;
+      margin: 0 auto;
       top: -50px;
     }
   }
 
-  &.--r{
-    .blog-item__info{
-      right:5%;
-      @include  screen-sm(){
+  &.--r {
+    .blog-item__info {
+      right: 5%;
+      @include screen-sm() {
         right: 0;
       }
     }
-    .blog-item__img{
-      left:0;
+    .blog-item__img {
+      left: 0;
     }
   }
 
-  &.--l{
-    .blog-item__info{
-      left:5%;
-      @include  screen-sm(){
-       left: 0;
+  &.--l {
+    .blog-item__info {
+      left: 5%;
+      @include screen-sm() {
+        left: 0;
       }
 
     }
-    .blog-item__img{
-     right:0;
+    .blog-item__img {
+      right: 0;
     }
 
   }
 }
 
-
-.blog-section{
+.blog-section {
   position: relative;
   //@include  screen-sm(){
   //  padding-bottom: 40px;
   //}
 }
-.blog-slider-nav{
+
+.blog-slider-nav {
   position: absolute;
-  bottom:15px;
+  bottom: 15px;
   left: 45.5%;
   display: flex;
   align-items: center;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.5);
   padding: 10px 15px;
 
-  @include screen-sm(){
+  @include screen-sm() {
     left: auto;
     right: 15px;
   }
-  &__next, &__prev{
+  &__next, &__prev {
     width: 25px;
     height: 18px;
-   display: inline-block;
+    display: inline-block;
   }
-  &__next{
-  margin-left:15px;
+  &__next {
+    margin-left: 15px;
   }
-  &__prev{
-   margin-right: 15px;
+  &__prev {
+    margin-right: 15px;
   }
-  &__index{
+  &__index {
     font-size: 21px;
     color: #000;
-    .current{
+    .current {
       font-weight: 700;
     }
   }
 }
 
+.blog {
+
+  &-item {
+    margin: 30px 0;
+    width: 100%;
+    display: inline-block;
+
+  }
+}

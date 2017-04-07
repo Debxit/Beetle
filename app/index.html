@@ -7,6 +7,8 @@
 <body>
 
 @@include('partials/header.html')
+<div class="wrapper">
+
 
 <main class="main">
     @@include('partials/banners.html')
@@ -86,7 +88,7 @@
                         <div class="info__text">
                             Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
                         </div>
-                        <a href="" class="info__link">
+                        <a href="blog.html" class="info__link">
                             ЧИТАТЬ ДАЛЕЕ
                             <span class="arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
@@ -114,7 +116,7 @@
                         <div class="info__text">
                             Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
                         </div>
-                        <a href="" class="info__link">
+                        <a href="blog.html" class="info__link">
                             ЧИТАТЬ ДАЛЕЕ
                             <span class="arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
@@ -141,7 +143,7 @@
                         <div class="info__text">
                             Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
                         </div>
-                        <a href="" class="info__link">
+                        <a href="blog.html" class="info__link">
                             ЧИТАТЬ ДАЛЕЕ
                             <span class="arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
@@ -169,7 +171,7 @@
                         <div class="info__text">
                             Это легковой автомобиль, выпускавшийся германской компанией Volkswagen AG с 1938 года по 2003 год. Является самым массовым автомобилем в истории, производившимся без пересмотра базовой конструкции. Всего было изготовлено 21 529 464 автомобиля. Предлагаем вашему вниманию несколько самых интересных фактов о легендарном автомобиле Фольксваген Жук.
                         </div>
-                        <a href="" class="info__link">
+                        <a href="blog.html" class="info__link">
                             ЧИТАТЬ ДАЛЕЕ
                             <span class="arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
@@ -208,19 +210,19 @@
         </div>
 
         <div class="ages-wrap">
-            <a href="history.html" class="ages-block">
+            <a href="history-article.html" class="ages-block">
                 <div class="ages-block__year">1938</div>
                 <div class="ages-block__descr">Автомобиль Гитлера и Порше</div>
             </a>
-            <a href="history.html" class="ages-block">
+            <a href="history-article.html" class="ages-block">
                 <div class="ages-block__year">1998</div>
                 <div class="ages-block__descr">Volkswagen New Beetle</div>
             </a>
-            <a href="history.html" class="ages-block">
+            <a href="history-article.html" class="ages-block">
                 <div class="ages-block__year">2011</div>
                 <div class="ages-block__descr">Volkswagen Beetle (A5)</div>
             </a>
-            <a href="history.html" class="ages-block">
+            <a href="history-article.html" class="ages-block">
                 <div class="ages-block__year">2014</div>
                 <div class="ages-block__descr">Volkswagen Beetle Dune</div>
             </a>
@@ -247,6 +249,34 @@
                     </div>
                 </div>
             </div>
+
+        <div class="callback-form">
+            <div class="callback-form__title">
+                Обратная связь
+            </div>
+            <form class="main-form" id="application" action="application.php" method="POST" name="application">
+                <div class="form-item">
+                    <input name="name" id="Name" maxlength="20" required/>
+                    <label for="Name">Имя</label>
+                </div>
+                <div class="form-item">
+                    <input class="form-item" name="telephone" type="Tel" id="Phone" maxlength="20" required/>
+                    <label for="Phone">Телефон</label>
+                </div>
+                <div class="form-item">
+                    <textarea class="form-item" name="message" id="Message" cols="30" rows="3" required></textarea>
+                    <label for="Message">Сообщение</label>
+                </div>
+                <button class="btn" type="submit" form="application">отправить   <span class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                            <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                        </svg>
+                    </span>
+                </button>
+
+            </form>
+        </div>
+
         <div id="map">
         </div>
         <script>
@@ -456,37 +486,16 @@
             }
         </script>
 
-        <div class="callback-form">
-            <div class="callback-form__title">
-                Обратная связь
-            </div>
-            <form class="main-form" id="application" action="application.php" method="POST" name="application">
-                <div class="form-item">
-                    <input name="name" id="Name" maxlength="20" required/>
-                    <label for="Name">Имя</label>
-                </div>
-                <div class="form-item">
-                    <input class="form-item" name="telephone" type="Tel" id="Phone" maxlength="20" required/>
-                    <label for="Phone">Телефон</label>
-                </div>
-                <div class="form-item">
-                    <textarea class="form-item" name="message" id="Message" cols="30" rows="3" required></textarea>
-                    <label for="Message">Сообщение</label>
-                </div>
-                <button class="btn" type="submit" form="application">отправить   <span class="arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
-                            <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
-                        </svg>
-                    </span></button>
-
-            </form>
-        </div>
 
     </section>
+
+
 
 </main>
 
 @@include('partials/footer.html')
+
+</div>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap"
         async defer>
