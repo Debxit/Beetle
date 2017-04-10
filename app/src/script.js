@@ -72,4 +72,13 @@ $(document).ready(function () {
         }
     });
 
+    /*tabs*/
+
+    $('.tabs-nav__link').click(function () {
+        $('.tabs-nav__link').removeClass('active');
+        $('.tabs-content .tab').removeClass('visible');
+        $(this).addClass('active');
+        $($(this).attr('href')).addClass('visible');
+        return false;
+    });
 });
