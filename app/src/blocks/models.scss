@@ -1,49 +1,47 @@
-.models{
+.models {
   background: $green;
 
-  &-wrap{
+  &-wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-bottom: 70px;
 
-    @include screen-sm(){
-      justify-content:center;
+    @include screen-sm() {
+      justify-content: center;
     }
 
   }
 }
 
-.model-block{
-  width:30%;
+.model-block {
+  width: 30%;
   position: relative;
   text-align: center;
   display: inline-flex;
- flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-
-  @include screen-sm(){
-   width: 50%;
+  @include screen-sm() {
+    width: 50%;
     margin-bottom: 20px;
 
-    &:nth-child(2){
+    &:nth-child(2) {
       order: -1;
       width: 100%;
       margin-top: 60px;
     }
   }
-  @include screen-xs(){
+  @include screen-xs() {
     width: 80%;
   }
 
-
-  &:hover{
-    .model-block__img{
+  &:hover {
+    .model-block__img {
       transform: scale(1.1);
     }
-    .model-block__name{
+    .model-block__name {
       &:after {
         opacity: 1;
         transform: translateY(0px);
@@ -52,42 +50,39 @@
     }
   }
 
-
-  &__img{
+  &__img {
     max-width: 80%;
     transform: scale(1);
     transition: transform .3s ease;
   }
 
-  &__title{
+  &__title {
     display: block;
     font-size: 51px;
     font-weight: 400;
     width: 100%;
 
-    @include screen-xl(){
+    @include screen-xl() {
       font-size: 38px;
     }
-    @include screen-lg(){
+    @include screen-lg() {
       font-size: 28px;
-     margin-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
-  &__name{
+  &__name {
     font-size: 32px;
     font-weight: 400;
     display: inline-block;
     position: relative;
 
-    @include screen-xl(){
+    @include screen-xl() {
       font-size: 23px;
     }
 
-    @include screen-md(){
+    @include screen-md() {
       font-size: 20px;
     }
-
-
 
     &:after {
       position: absolute;
@@ -100,6 +95,305 @@
       opacity: 0;
       transition: opacity 0.3s, transform 0.3s;
       transform: translateY(15px);
+    }
+  }
+}
+
+.model-first {
+  background: $gray;
+  padding-bottom: 60px;
+  @include screen-xl(min){
+    height: 85vh;
+  }
+
+
+  .descr-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+
+    @include screen-sm(){
+      flex-wrap: wrap;
+    }
+  }
+  .model-description {
+    width: 45%;
+    @include screen-md(){
+      width: 55%;
+    }
+    @include screen-sm(){
+      width: 100%;
+    }
+    &__title {
+      font-weight: 400;
+      font-size: 2.15em;
+      margin-bottom: 1em;
+      color: $dark-gray;
+    }
+    &__text {
+      color: #000;
+    }
+  }
+  .model-characteristic {
+    width: 48%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 4.5em;
+    @include screen-lg(){
+      margin-top: 7em;
+    }
+
+    @include screen-md(){
+      flex-wrap: wrap;
+      width: 40%;
+    }
+
+    @include screen-sm(){
+      width: 100%;
+      margin-top: 3em;
+    }
+
+    &__block {
+      width: 30%;
+      @include screen-md(){
+        width: 100%;
+      }
+    }
+    &__title {
+      text-transform: uppercase;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: $dark-gray;
+      margin-bottom: 1em;
+      @include screen-md(){
+        margin-bottom: 0.5em;
+      }
+    }
+
+    &__text {
+      color: #000;
+      @include screen-sm(){
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+}
+
+.model-slider {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 60px;
+
+  @include screen-lg(){
+    width: 100%;
+    padding-right: 20%;
+  }
+  .slick-dots {
+    list-style: none;
+    width: 20%;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    li {
+      margin: 20px 0;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.application {
+
+  background: $green;
+  height: 215px;
+  position: relative;
+
+  @include screen-sm(){
+    height: auto;
+    padding: 20px 0;
+  }
+
+  &__img-left, &__img-right {
+    position: absolute;
+    top: 15%;
+    height: 70%;
+
+    @include screen-xl(){
+      top: 25%;
+      height: 45%;
+    }
+    @include screen-sm(){
+     display: none;
+    }
+  }
+  &__img-left {
+    left: 0;
+  }
+  &__img-right {
+    right: 0;
+
+  }
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 215px;
+
+    @include screen-sm(){
+      height: auto;
+      flex-wrap: wrap;
+      width: 100%;
+      margin: 0 auto;
+
+    }
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    @include  screen-xl(){
+      font-size: 33px;
+    }
+    @include  screen-lg(){
+      font-size: 28px;
+      width: 60%;
+    }
+    @include screen-sm(){
+      width:100%;
+    }
+  }
+
+  .main-form input {
+    background: transparent;
+    border: solid 2px #fff;
+    min-height: 50px;
+    color: #fff;
+    font-size: 22px;
+  }
+  .main-form label {
+    font-size: 22px;
+    color: #fff;
+    bottom: 13px;
+    left: 10px;
+  }
+  .btn {
+    border-color: transparent;
+    background: transparent;
+    margin-top: 20px;
+
+    @include screen-lg(){
+      font-size: 18px;
+    }
+    @include screen-sm(){
+      width:100%;
+    }
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+}
+
+.additional-items {
+  padding-top: 50px;
+  .info {
+    display: inline-flex;
+    align-items: center;
+    width: 14%;
+    @include screen-md(){
+      width: 100%;
+    }
+  }
+  .service-block {
+    width: 14%;
+    display: inline-flex;
+    align-items: center;
+
+    @include screen-md(){
+      width: 19%;
+    }
+    @include screen-sm(){
+      width: 50%;
+    }
+    &__img {
+      background: $ultra-light-gray;
+    }
+    &__title{
+      @include screen-xl(){
+        font-size: 16px;
+      }
+    }
+    &:hover {
+      .service-block__img {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.more-models {
+padding-top: 70px;
+
+  .models-wrap{
+    padding:0;
+  }
+
+  .model-block {
+    height: 250px;
+    font-size: 40px;
+    width: 33.33%;
+    margin-bottom: 0;
+
+    @include screen-xl(){
+      font-size: 32px;
+    }
+     @include screen-lg(){
+       height: 180px;
+    }
+    @include screen-sm(){
+       height: 140px;
+       width: 50%;
+    }
+    @include screen-xs(){
+      height: 100px;
+       width: 100%;
+    }
+    &__title{
+      font-weight: 300;
+    }
+    &__name{
+      font-weight: 700;
+      color: $gray;
+      font-size: 1.5em;
+      @include screen-xl(){
+        font-size: 1.2em;
+      }
+    }
+
+    &:hover{
+      background: $dark-gray;
+
+      .model-block__name{
+        color: #fff;
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+  .--black{
+    background: $dark-gray;
+  }
+
+  @include screen-sm(){
+    .model-block:nth-child(2){
+      width: 100%;
     }
   }
 }

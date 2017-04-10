@@ -80,7 +80,7 @@
 
 .blog-slider-nav {
   position: absolute;
-  bottom: 15px;
+  bottom: 35px;
   left: 45.5%;
   display: flex;
   align-items: center;
@@ -95,6 +95,10 @@
     width: 25px;
     height: 18px;
     display: inline-block;
+
+    &:hover{
+      cursor: pointer;
+    }
   }
   &__next {
     margin-left: 15px;
@@ -119,4 +123,5 @@
     display: inline-block;
 
   }
+
 }

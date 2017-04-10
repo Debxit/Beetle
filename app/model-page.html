@@ -11,16 +11,157 @@
 <div class="wrapper">
     <main class="main">
 
-        <section class="model-slider">
-            <div data-thumb="http://cdn.bulbagarden.net/upload/e/ec/001MS.png"><img src="http://cdn.bulbagarden.net/upload/c/c0/Spr_3f_001.png"></div>
-            <div data-thumb="http://cdn.bulbagarden.net/upload/b/bb/004MS.png"><img src="http://cdn.bulbagarden.net/upload/e/e9/Spr_3f_004.png"></div>
-            <div data-thumb="http://cdn.bulbagarden.net/upload/9/92/007MS.png"><img src="http://cdn.bulbagarden.net/upload/f/f8/Spr_3f_007.png"></div>
-            <div data-thumb="http://cdn.bulbagarden.net/upload/0/0f/025MS.png"><img src="http://cdn.bulbagarden.net/upload/5/5b/Spr_3f_025.png"></div>
-            <div data-thumb="http://cdn.bulbagarden.net/upload/d/de/133MS.png"><img src="http://cdn.bulbagarden.net/upload/a/a9/Spr_3f_133.png"></div>
-            <div data-thumb="http://cdn.bulbagarden.net/upload/a/a7/151MS.png"><img src="http://cdn.bulbagarden.net/upload/3/33/Spr_3f_151.png"></div>
+        <section class="model-first">
+            <div class="container">
+                <div class="model-slider">
+                    <div data-thumb="img/model-slider1.png"><img src="img/model-slider1.png"></div>
+                    <div data-thumb="img/model-slider2.png"><img src="img/model-slider2.png"></div>
+                    <div data-thumb="img/model-slider3.png"><img src="img/model-slider3.png"></div>
+                </div>
+                <div class="descr-wrap">
+                    <div class="model-description">
+                        <div class="model-description__title">Volkswagen New Beetl Cabriolet</div>
+                        <div class="model-description__text">Известная модель в сбоке кабриолет, выпускается с 2011
+                            года. Воспользуйтесь бесключевым доступом с помощью кнопочного запуска и найдите свой
+                            маршрут с помощью сенсорной навигационной системы, используя цветной дисплей с диагональю
+                            6.33 дюйма. VW Car-Net® App-Connect позволяющий получить доступ к музыке, карте, сообщениям
+                            и т. д. На смартфоне, используя Apple CarPlay ™, Android Auto ™ или MirrorLink®.2.
+                        </div>
+                    </div>
+                    <div class="model-characteristic">
+                        <div class="model-characteristic__block">
+                            <div class="model-characteristic__title">Двигатель</div>
+                            <div class="model-characteristic__text">
+                                1.8T 4-цилиндровый
+                                Двигатель TSI®
+                            </div>
+                        </div>
+                        <div class="model-characteristic__block">
+                            <div class="model-characteristic__title">МОЩНОСТь</div>
+                            <div class="model-characteristic__text">
+                                170 л.с.
+                            </div>
+                        </div>
+                        <div class="model-characteristic__block">
+                            <div class="model-characteristic__title">РАСХОД</div>
+                            <div class="model-characteristic__text">
+                                7,2 л/100 км
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <section class="application">
+            <img src="img/appl1.png" alt="" class="application__img-left">
+            <img src="img/appl2.png" alt="" class="application__img-right">
+            <div class="container">
+                <div class="application-wrap">
+                    <h2 class="application__title">Понравился автомобиль?<br>
+                        Оставьте заявку и он может стать вашим!</h2>
+                    <div class="application__form">
+                        <form class="main-form" id="application" action="application.php" method="POST"
+                              name="application">
+                            <div class="form-item">
+                                <input name="mail" id="mail" maxlength="40" required/>
+                                <label for="mail">E-mail</label>
+                            </div>
+                            <button class="btn" type="submit" form="application">отправить заявку
+                                <span class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                                    <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                                </svg>
+                            </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="additional-items">
+            <div class="container">
+                <div class="services-wrap">
+                    <div class="info">
+                        <div class="info__title">
+                            Добавьте
+                        </div>
+                    </div>
 
-
+                    <div class="service-block">
+                        <a href="" class="service-block__link">
+                    <span class="service-block__img">
+                        <img src="img/accessories.png" alt="">
+                    </span>
+                            <div class="service-block__title">
+                                аксессуары
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-block">
+                        <a href="" class="service-block__link">
+                    <span class="service-block__img">
+                        <img src="img/discs.png" alt="">
+                    </span>
+                            <div class="service-block__title">
+                                Литые диски
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-block">
+                        <a href="" class="service-block__link">
+                    <span class="service-block__img">
+                        <img src="img/spares.png" alt="">
+                    </span>
+                            <div class="service-block__title">
+                                запчасти
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-block">
+                        <a href="" class="service-block__link">
+                    <span class="service-block__img">
+                        <img src="img/signal.png" alt="">
+                    </span>
+                            <div class="service-block__title">
+                               сигнализация
+                            </div>
+                        </a>
+                    </div>
+                    <div class="service-block">
+                        <a href="" class="service-block__link">
+                    <span class="service-block__img">
+                        <img src="img/navigation.png" alt="">
+                    </span>
+                            <div class="service-block__title">
+                                оборудование
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="more-models">
+            <div class="models-wrap">
+                <a href="model-page.html" class="model-block">
+                    <span class="model-block__name">Beetle</span>
+                </a>
+                <div class="model-block --black">
+                    <span class="model-block__title --white">Модельный ряд</span>
+                </div>
+                <a href="model-page.html" class="model-block">
+                    <span class="model-block__name">New Beetle (A4)</span>
+                </a>
+                <a href="model-page.html" class="model-block">
+                    <span class="model-block__name">New Beetle (A5) </span>
+                </a>
+                <a href="model-page.html" class="model-block">
+                    <span class="model-block__name">Cabriolet</span>
+                </a>
+                <a href="model-page.html" class="model-block">
+                    <span class="model-block__name">Dune</span>
+                </a>
+            </div>
+        </section>
     </main>
     @@include('partials/footer.html')
 </div>

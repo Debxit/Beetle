@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('partials/head.html')
+    <title>Services</title>
+</head>
+<body>
+
+@@include('partials/header.html')
+
+<div class="wrapper">
+    <main class="main">
+        <section class="service-first">
+            <div class="container">
+                <div class="serv-header-wrap">
+                    <div class="header_rimg">
+                        <img src="img/auto-parts.png" alt="">
+                    </div>
+                    <div class="header_lside">
+                        <h1>Для Beetle у нас есть все!</h1>
+                        <p>Мы можем помочь как в выборе авто, так и в его обслуживании</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="callback_serv">
+            <div class="container">
+                <div class="callback_serv-wrap">
+                    <div class="callback_lside">
+                        <img src="img/mechanic.png" alt="">
+                    </div>
+                    <form id="application" class="callback_rside main-form" action="application.php" method="POST"
+                          name="application">
+                        <span class="text">Хотите   Volkswagen Beetle? <br> Позвоните нам!</span>
+                        <div class="form-item">
+                            <input name="name" id="Name" maxlength="20" required="">
+                            <label for="Name">Имя</label>
+                        </div>
+                        <div class="form-item">
+                            <input class="form-item" name="telephone" type="tel" id="Phone" maxlength="20" required/>
+                            <label for="Phone">Телефон</label>
+                        </div>
+                        <div class="form-item">
+                            <textarea class="form-item" name="message" id="Message" cols="30" rows="3"
+                                      required></textarea>
+                            <label for="Message">Сообщение</label>
+                        </div>
+                        <button class="btn" type="submit" form="application">отправить
+                            <span class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.2 25.99">
+                            <polyline class="cls-1" points="1.18 0.93 11.24 13.68 1.26 24.99"/>
+                        </svg>
+                        </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="container">
+                <div>
+                    <p class="title-tabs">Услуги</p>
+                    <div class="tabs tabs-style-linemove">
+                        <nav>
+                            <ul>
+                                <li><a href="#section-linemove-1"
+                                       class="icon icon-home"><span>Консультации</span></a></li>
+                                <li><a href="#section-linemove-2" class="icon icon-box"><span>Шиномонтаж</span></a>
+                                </li>
+                                <li><a href="#section-linemove-3" class="icon icon-display"><span>Диагностика</span></a>
+                                </li>
+                                <li><a href="#section-linemove-4" class="icon icon-upload"><span>Ремонт</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="content-wrap">
+                            <section id="section-linemove-1">
+
+                                <div class="services_search">
+                                    <p>Поиск машины за рубежом</p>
+                                    <span>8 800</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Помощь в доставке и растаможке</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Услуги по поиску и доставке запчастей</p>
+                                    <span>5 000</span>
+                                </div>
+
+                                <div class="ervices_search">
+                                    <p>Осмотр и консуьтация по поводу повреждений</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Рекомендации по уходу за машиной</p>
+                                    <span>5 000</span>
+                                </div>
+                            </section>
+                            <section id="section-linemove-2">
+
+                                <div class="services_search">
+                                    <p>Рекомендации по уходу за машиной</p>
+                                    <span>8 800</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Помощь в доставке и растаможке</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Услуги по поиску и доставке запчастей</p>
+                                    <span>5 000</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Осмотр и консуьтация по поводу повреждений</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Рекомендации по уходу за машиной</p>
+                                    <span>5 000</span>
+                                </div>
+
+                            </section>
+                            <section id="section-linemove-3">
+
+                                <div class="services_search">
+                                    <p>Услуги по поиску и доставке запчастей</p>
+                                    <span>8 800</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Помощь в доставке и растаможке</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Услуги по поиску и доставке запчастей</p>
+                                    <span>5 000</span>
+                                </div>
+                                <div class="services_search">
+                                    <p>Осмотр и консуьтация по поводу повреждений</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Рекомендации по уходу за машиной</p>
+                                    <span>5 000</span>
+                                </div>
+
+                            </section>
+                            <section id="section-linemove-4">
+
+                                <div class="services_search">
+                                    <p>Осмотр и консуьтация по поводу повреждений</p>
+                                    <span>8 800</span>
+                                </div>
+
+
+                                <div class="services_search">
+                                    <p>Помощь в доставке и растаможке</p>
+                                    <span>9 500</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Услуги по поиску и доставке запчастей</p>
+                                    <span>5 000</span>
+                                </div>
+
+                                <div class="services_search">
+                                    <p>Осмотр и консуьтация по поводу повреждений</p>
+                                    <span>9 500</span>
+                                </div>
+
+
+                                <div class="services_search">
+                                    <p>Рекомендации по уходу за машиной</p>
+                                    <span>5 000</span>
+                                </div>
+
+                            </section>
+                        </div><!-- /content -->
+                    </div><!-- /tabs -->
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    @@include('partials/footer.html')
+</div>
+</body>
+</html>

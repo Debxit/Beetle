@@ -1,23 +1,28 @@
 $(document).ready(function () {
 
-    $('.nav__item').click(function () {
-        $('.nav__item').removeClass("active");
+    $('.nav__link').click(function () {
+        $('.nav__link').removeClass("active");
         $(this).addClass("active");
     });
 
     $('.navbar-toggle').click(function () {
         $(this).toggleClass("is-active");
-        $('.wrapper').toggleClass("hidden").click(function () {
-            $(this).removeClass("hidden");
-            $('.navbar-toggle').removeClass("is-active");
-            $(".navbar-collapse ").removeClass("open");
-            return false;
-        });
+        $('.wrapper').toggleClass("hidden");
         $(".navbar-collapse ").toggleClass("open");
     });
 
+//close mobile menu on body click
+    $(document).on('click', function(e) {
+        var target = e.target;
 
+        if ($(target).hasClass("navbar-toggle")||$(target).hasClass("icon-bar")||$(target).hasClass("nav__item")){
+            return false;
+        }
 
+       $('.wrapper').removeClass("hidden");
+        $('.navbar-toggle').removeClass("is-active");
+        $(".navbar-collapse").removeClass("open");
+    });
 
     $('.main-slider').slick({
         dots: true,
@@ -49,7 +54,6 @@ $(document).ready(function () {
         $('.blog-slider').slick('slickNext');
     });
 
-
     $('.blog-slider').on('afterChange', function (event, slick, currentSlide) {
         var current = currentSlide +1;
         if (current < 10) {
@@ -58,26 +62,14 @@ $(document).ready(function () {
         $('.blog-slider-nav__index .current').html(current);
     });
 
-
     $(".model-slider").slick({
-        autoplay: true,
+        autoplay: false,
         dots: true,
         arrows: false,
         customPaging : function(slider, i) {
             var thumb = $(slider.$slides[i]).data('thumb');
             return '<a><img src="'+thumb+'"></a>';
-        },
-
-        responsive: [{
-            breakpoint: 500,
-            settings: {
-                dots: false,
-                infinite: false,
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }]
+        }
     });
-
 
 });
