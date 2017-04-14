@@ -2,10 +2,18 @@
   height: 100vh;
   padding-top: 0 !important;
 
+  @media (max-width: 740px) and (orientation: landscape) {
+    height: 150vh;
+  }
+
   .slide {
     height: 100vh;
     width: 100vw;
     position: relative;
+
+    @media (max-width: 740px) and (orientation: landscape) {
+      height: 150vh;
+    }
 
     &:focus,&active{
       outline: none;
@@ -33,7 +41,7 @@
       }
 
 
-      &.--right {
+      &._right{
         float: right;
         text-align: right;
       }
@@ -67,7 +75,7 @@
 
 
       @include screen-sm() {
-        background:$green url("../img/green-car.png") 0 100% no-repeat;
+        background:$green url("../img/green-car.png") 0 90% no-repeat;
         background-size: contain;
       }
 
@@ -128,7 +136,7 @@
         background: $lilac url("../img/lilac-car.png") 32% 62% no-repeat;
       }
       @include screen-sm() {
-        background:$lilac url("../img/lilac-car.png") 0 100% no-repeat;
+        background:$lilac url("../img/lilac-car.png") 0 90% no-repeat;
         background-size: contain;
       }
 
@@ -167,6 +175,10 @@
 
         &:active, &:focus {
           outline: none;
+        }
+        &:hover{
+          cursor: pointer;
+          color: #fff;
         }
       }
       &.slick-active {

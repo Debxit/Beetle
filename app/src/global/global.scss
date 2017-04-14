@@ -16,9 +16,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+
 }
 .main {
   flex: 1 0 auto;
+  min-height: 1px;
 }
 .footer {
   flex: 0 0 auto;
@@ -90,11 +92,12 @@ textarea {
   &.hidden{
     height: 100vh;
     overflow: hidden;
-    filter:blur(5px);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
     pointer-events: none;
   }
 }
-.--white {
+._white{
   color: #fff;
 }
 
@@ -106,31 +109,45 @@ textarea {
   font-size: 1.6em;
   line-height: 1.6em;
   text-decoration: none;
+  font-family: $font-main;
   font-weight: 700;
   color: #fff;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
   box-sizing: border-box;
+  z-index: 2;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 60px;
+  overflow: hidden;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 
   @include  screen-sm(){
-    padding: 6px 15px;
+    padding: 10px 15px;
     padding-right: 0;
     font-size: 1.2em;
     line-height: 1em;
     margin-top: 40px;
+
+    .arrow {
+      content: '';
+      width: 55px;
+      height: 20px;
+    }
   }
   &:after {
+    width: 110%;
     height: 100%;
-    width: 0;
     top: 0;
     left: 0;
     background: #fff;
     content: '';
     position: absolute;
     z-index: -1;
-    transition: width ease-out .3s;
-
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform-origin: 0% 100%;
+    transition: transform 0.4s, opacity 0.3s, background-color 0.4s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
   }
 
   .arrow {
@@ -138,10 +155,9 @@ textarea {
     width: 55px;
     height: 30px;
     display: inline-block;
-    text-align: center;
-    vertical-align:middle;
+
    svg {
-      height: 90%;
+      height: 100%;
       position: relative;
     }
   }
@@ -154,8 +170,8 @@ textarea {
     color: inherit;
 
     &:after {
-      width: 100%;
-
+      transform: rotate3d(0, 0, 1, 0deg);
+      opacity: 1;
     }
   }
   &:active{
@@ -167,6 +183,55 @@ textarea {
   }
 }
 
+.main-form {
+
+  label {
+    color: $font-light-gray;
+  }
+
+  input, textarea {
+    border-bottom: solid 1px $light-gray;
+  }
+  textarea {
+    margin-top: 20px;
+  }
+
+
+  .btn {
+    margin-top: 40px;
+    border-color: $dark-gray;
+    color: $dark-gray;
+    background: transparent;
+    min-width: 225px;
+    font-size: 16px;
+    padding: 15px;
+    padding-right: 0;
+
+    &:after {
+      background: $dark-gray;
+    }
+
+    .arrow {
+      height:20px;
+      float: right;
+    }
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      .arrow{
+        svg{
+          stroke: #fff;
+        }
+      }
+    }
+
+    .arrow {
+      svg {
+        stroke: $dark-gray;
+      }
+    }
+  }
+}
 
 .arrow{
   content: '';

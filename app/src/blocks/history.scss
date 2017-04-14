@@ -32,11 +32,6 @@
     transition: background .2s ease;
     box-sizing: border-box;
 
-    @include  screen-sm(){
-      width: 50%;
-    }
-
-
     &__year {
       font-size: 6vw;
       font-weight: 700;
@@ -57,14 +52,31 @@
 
     &:hover {
       background: $dark-gray;
+    }
+
+
+    @include  screen-sm(){
+      width: 50%;
+      background: $light-gray;
+
       &__year {
-        color: $ultra-light-gray;
+        color: $dark-gray;
       }
       &__descr {
-        color: $ultra-light-gray;
-        transform: translateY(0px);
+        color:  $dark-gray;
       }
+
+      &:hover {
+        .ages-block__year {
+          color: $ultra-light-gray;
+        }
+        .ages-block__descr {
+          color: $ultra-light-gray;
+        }
+      }
+
     }
+
   }
 }
 
@@ -75,19 +87,22 @@
   height: 100vh;
   text-align: center;
 
+
+
   &__title{
-    margin-top: 33%;
-    margin-bottom: 1em;
+    margin-top: 22%;
+    margin-bottom: 0.7em;
     font-size: 118px;
     font-weight: 700;
     display: inline-block;
 
     @include screen-xl(){
-      margin-top: 15%;
+      margin-top: 12%;
+      margin-bottom: 0.5em;
     }
 
     @include screen-md(){
-      margin-top: 275px;
+      margin-top: 205px;
       font-size: 10vw;
     }
 
@@ -98,6 +113,11 @@
     @include screen-xs(){
       font-size: 20vw;
     }
+
+    @media (max-width: 740px) and (orientation: landscape) {
+      margin-top: 50px;
+    }
+
 
   }
 
@@ -148,20 +168,25 @@
 .history-block{
     width: 50%;
   position: relative;
-  padding-bottom: 30%;
+  padding-bottom: 20vw;
   margin-bottom: 80px;
 
-  @include screen-md(){
-    padding-bottom: 37%;
+  @include screen-xl(){
     margin-bottom: 40px;
+  }
+  @include screen-lg(){
+    padding-bottom: 28vw;
+  }
+  @include screen-md(){
+    padding-bottom: 33vw;
   }
   @include screen-sm(){
     width: 80%;
-    padding-bottom:50%;
+    padding-bottom:50vw;
   }
   @include screen-xs(){
       width: 95%;
-      padding-bottom: 80%;
+      padding-bottom: 80vw;
   }
 
   &:hover{
@@ -186,7 +211,7 @@
     transition: top .2s ease, left .3s ease,color .3s ease;
     color: $light-gray;
 
-    @include screen-lg(){
+    @include screen-xl(){
       font-size: 80px;
     }
     @include screen-sm(){

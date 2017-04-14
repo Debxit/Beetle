@@ -1,18 +1,30 @@
 @font-face {
 	font-family: 'Gotha';
-	src: url($path + 'fonts/GothaProReg.otf');
+	src: url($path + "fonts/GothamProRegular.otf");
+	src: local('☺'),
+	url($path + "fonts/GothamProRegular.eot?#iefix") format("embedded-opentype"),
+	url($path + "fonts/GothamProRegular.woff") format("woff"),
+	url($path + 'fonts/GothamProRegular.ttf') format("truetype");
 	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Gotha';
-	src: url($path + 'fonts/GothaProMed.otf');
+	src: url($path + "fonts/GothamProMedium.otf");
+	src: local('☺'),
+	url($path + "fonts/GothamProMedium.eot?#iefix") format("embedded-opentype"),
+	url($path + "fonts/GothamProMedium.woff") format("woff"),
+	url($path + 'fonts/GothamProMedium.ttf') format("truetype");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'Gotha';
-	src: url($path + 'fonts/GothaProBol.otf');
+	src: url($path + "fonts/GothamProBold.otf");
+	src: local('☺'),
+	url($path + "fonts/GothamProBold.eot?#iefix") format("embedded-opentype"),
+	url($path + "fonts/GothamProBold.woff") format("woff"),
+	url($path + 'fonts/GothamProBold.ttf') format("truetype");
 	font-weight: 700;
 	font-style: normal;
 }

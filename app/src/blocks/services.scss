@@ -38,8 +38,14 @@
     width: 30%;
   }
 
+
   @include screen-sm() {
-    width: 52%;
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  @include screen-xs() {
+    width: 55%;
     margin-bottom: 20px;
   }
 
@@ -50,7 +56,7 @@
     display: inline-block;
     border: 7px solid transparent;
     transition: border 500ms ease-out;
-
+    width:100%;
     img {
       max-width: 100%;
       transform: scale(1);
@@ -70,6 +76,9 @@
 
     @include screen-sm() {
       font-size: 16px;
+      opacity: 1;
+      padding-top: 20px;
+      transform: translateY(0);
     }
 
   }
@@ -99,14 +108,14 @@
 .service-banner-wrap {
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 150px;
 
-  @include screen-xl(){
+  @include screen-lg() {
     padding-top: 50px;
     padding-bottom: 60px;
   }
-  @include screen-md(){
+  @include screen-md() {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -114,11 +123,11 @@
 
 .service-banner-wrap__img {
   width: 38%;
-  @include screen-md(){
+  @include screen-md() {
     width: 60%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
-  @include screen-sm(){
+  @include screen-sm() {
     width: 90%;
   }
   img {
@@ -130,7 +139,6 @@
   font-size: 51px;
   width: 52%;
   font-weight: 400;
-  margin-top: 16px;
   line-height: 1.6em;
 
   @include screen-xl() {
@@ -140,69 +148,59 @@
   @include screen-lg() {
     font-size: 38px;
   }
-  @include screen-md(){
+  @include screen-md() {
     width: 80%;
+    text-align: center;
   }
-  @include screen-sm(){
+  @include screen-sm() {
     width: 100%;
-    font-size: 33px;
+    font-size: 30px;
   }
 }
 
 .service-callback {
   padding: 110px 0;
   background: $ultra-light-gray;
-
+  @include screen-xl() {
+    padding: 50px 0;
+  }
   &-wrap {
     display: flex;
     justify-content: space-between;
     font-size: 32px;
+
+    @include screen-xs() {
+      flex-wrap: wrap;
+    }
   }
 
   &__img {
     width: 35%;
+    @include screen-xs() {
+      width: 60%;
+      margin: 0 auto;
+    }
     img {
       max-width: 100%;
     }
   }
 
   .main-form {
-    width: 40%;
+    width: 50%;
 
     @include screen-md() {
       width: 55%;
     }
-
+    @include screen-xs() {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
     .text {
       font-size: 1em;
       font-weight: 400;
       margin-bottom: 30px;
       display: block;
-    }
-
-    .btn {
-      border-color: $dark-gray;
-      color: $dark-gray;
-      background: transparent;
-      min-width: 225px;
-      font-size: 16px;
-      padding: 14px 0;
-      margin: 0;
-      height: auto;
-
-      .arrow {
-        height: 16px;
-        float: right;
-      }
-      &:hover {
-        cursor: pointer;
-      }
-
-      .arrow {
-        svg {
-          stroke: $dark-gray;
-        }
-      }
     }
 
     label {
@@ -223,93 +221,131 @@
       padding-top: 20px;
       height: 120px;
     }
+    .btn {
+      margin-top: 15px;
+      padding: 15px 25px;
+      padding-right: 0;
+    }
+  }
+}
+
+/*tabs*/
+.services-tabs {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 100px 15px;
+
+  @include screen-xl() {
+    padding: 40px 15px;
+  }
+  @include screen-xs() {
+    padding-bottom: 0;
+  }
+}
+
+.title-tabs {
+  font-size: 51px;
+  margin-bottom: 1.5em;
+  font-weight: 400;
+
+  @include screen-sm() {
+    font-size: 40px;
+  }
+}
+
+.tabs-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+  border: solid 1px $ultra-light-gray;
+
+  @include screen-md() {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 25%;
+    text-align: center;
+    @include screen-md() {
+      width: 50%;
+    }
+    @include screen-xs() {
+      width: 100%;
+    }
+  }
+  &__link {
+    width: 100%;
+    padding: 0.8em 1.2em;
+    display: inline-block;
+    font-size: 25px;
+    box-sizing: border-box;
+
+    @include screen-sm() {
+      font-size: 20px;
+    }
+    &.active, &:hover {
+      background: $red;
+      color: #fff;
+    }
 
   }
 }
 
-  /*tabs*/
-  .services-tabs {
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 100px 15px;
-
+.services_search {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  font-size: 18px;
+  align-items: flex-end;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 2.05em;
+  letter-spacing: 0.2px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid $ultra-light-gray;
+  @include screen-xs() {
+    flex-wrap: wrap;
+    height: auto;
   }
+}
 
-  .title-tabs {
-    font-size: 51px;
-    margin-bottom: 1.5em;
-    font-weight: 400;
+.services_search .price {
+  font-weight: 400;
+
+  @include screen-sm() {
+    width: 20%;
+    text-align: right;
   }
-
-  .tabs-nav {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  @include screen-xs() {
     width: 100%;
-    justify-content: space-between;
-    border: solid 1px $ultra-light-gray;
-
-    @include screen-md(){
-      flex-wrap: wrap;
-    }
-
-    &__item {
-      width: 25%;
-      text-align: center;
-      @include screen-md(){
-        width: 50%;
-      }
-    }
-    &__link {
-      width: 100%;
-      padding: 20px 30px;
-      display: inline-block;
-      font-size: 25px;
-      box-sizing: border-box;
-
-      &.active, &:hover {
-        background: $red;
-        color: #fff;
-      }
-
-    }
-  }
-
-  .services_search {
-    display: flex;
-    justify-content: space-between;
-    height: 75px;
-    font-size: 18px;
-    align-items: flex-end;
+    display: block;
     text-align: left;
-    padding: 0;
-    margin-bottom: 2.05em;
-    letter-spacing: 0.2px;
-    padding-bottom: 10px;
     margin-top: 10px;
-    border-bottom: 1px solid $ultra-light-gray;
-  }
-  .services_search .price {
-    font-weight: 400;
-  }
-  .services_search .price::after {
-    content: 'е';
-    width: 27px;
-    height: 30px;
-    font-family: 'RUBSN';
-    font-size: 20px;
-    color: $dark-gray;
-    margin-left: 5px;
   }
 
-  .tabs-content {
-    .tab {
-      display: none;
-      padding-top: 50px;
-    }
+}
 
-    .visible {
-      display: block;
-    }
+.services_search .price::after {
+  content: 'е';
+  width: 27px;
+  height: 30px;
+  font-family: 'RUBSN';
+  font-size: 20px;
+  color: $dark-gray;
+  margin-left: 5px;
+}
+
+.tabs-content {
+  .tab {
+    display: none;
+    padding-top: 50px;
   }
+
+  .visible {
+    display: block;
+  }
+}

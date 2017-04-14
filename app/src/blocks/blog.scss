@@ -44,7 +44,7 @@
     }
   }
 
-  &.--r {
+  &._right {
     .blog-item__info {
       right: 5%;
       @include screen-sm() {
@@ -56,7 +56,7 @@
     }
   }
 
-  &.--l {
+  &._left {
     .blog-item__info {
       left: 5%;
       @include screen-sm() {

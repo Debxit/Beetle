@@ -16,12 +16,14 @@
 
 .model-block {
   width: 30%;
+  min-height: 1px;
   position: relative;
   text-align: center;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-content: center;
 
   @include screen-sm() {
     width: 50%;
@@ -54,6 +56,8 @@
     max-width: 80%;
     transform: scale(1);
     transition: transform .3s ease;
+    flex-shrink: 0;
+
   }
 
   &__title {
@@ -70,6 +74,7 @@
       margin-bottom: 20px;
     }
   }
+
   &__name {
     font-size: 32px;
     font-weight: 400;
@@ -97,31 +102,31 @@
       transform: translateY(15px);
     }
   }
+
 }
 
 .model-first {
   background: $gray;
   padding-bottom: 60px;
-  @include screen-xl(min){
+  @include screen-xl(min) {
     height: 85vh;
   }
-
 
   .descr-wrap {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
 
-    @include screen-sm(){
+    @include screen-sm() {
       flex-wrap: wrap;
     }
   }
   .model-description {
     width: 45%;
-    @include screen-md(){
+    @include screen-md() {
       width: 55%;
     }
-    @include screen-sm(){
+    @include screen-sm() {
       width: 100%;
     }
     &__title {
@@ -139,23 +144,23 @@
     justify-content: space-between;
     display: flex;
     margin-top: 4.5em;
-    @include screen-lg(){
+    @include screen-lg() {
       margin-top: 7em;
     }
 
-    @include screen-md(){
+    @include screen-md() {
       flex-wrap: wrap;
       width: 40%;
     }
 
-    @include screen-sm(){
+    @include screen-sm() {
       width: 100%;
       margin-top: 3em;
     }
 
     &__block {
       width: 30%;
-      @include screen-md(){
+      @include screen-md() {
         width: 100%;
       }
     }
@@ -165,14 +170,14 @@
       font-weight: 700;
       color: $dark-gray;
       margin-bottom: 1em;
-      @include screen-md(){
+      @include screen-md() {
         margin-bottom: 0.5em;
       }
     }
 
     &__text {
       color: #000;
-      @include screen-sm(){
+      @include screen-sm() {
         margin-bottom: 1em;
       }
     }
@@ -185,7 +190,7 @@
   margin: 0 auto;
   padding-top: 60px;
 
-  @include screen-lg(){
+  @include screen-lg() {
     width: 100%;
     padding-right: 20%;
   }
@@ -211,7 +216,7 @@
   height: 215px;
   position: relative;
 
-  @include screen-sm(){
+  @include screen-sm() {
     height: auto;
     padding: 20px 0;
   }
@@ -221,12 +226,12 @@
     top: 15%;
     height: 70%;
 
-    @include screen-xl(){
+    @include screen-xl() {
       top: 25%;
       height: 45%;
     }
-    @include screen-sm(){
-     display: none;
+    @include screen-sm() {
+      display: none;
     }
   }
   &__img-left {
@@ -243,7 +248,7 @@
     align-items: center;
     height: 215px;
 
-    @include screen-sm(){
+    @include screen-sm() {
       height: auto;
       flex-wrap: wrap;
       width: 100%;
@@ -256,48 +261,64 @@
     color: #fff;
     font-size: 40px;
     font-weight: 300;
-    @include  screen-xl(){
+    @include screen-xl() {
       font-size: 33px;
     }
-    @include  screen-lg(){
+    @include screen-lg() {
       font-size: 28px;
       width: 60%;
     }
-    @include screen-sm(){
-      width:100%;
+    @include screen-sm() {
+      width: 100%;
     }
   }
 
-  .main-form input {
-    background: transparent;
-    border: solid 2px #fff;
-    min-height: 50px;
-    color: #fff;
-    font-size: 22px;
-  }
-  .main-form label {
-    font-size: 22px;
-    color: #fff;
-    bottom: 13px;
-    left: 10px;
-  }
-  .btn {
-    border-color: transparent;
-    background: transparent;
-    margin-top: 20px;
-
-    @include screen-lg(){
-      font-size: 18px;
-    }
-    @include screen-sm(){
-      width:100%;
-    }
-    &:hover {
+  .main-form {
+    input {
+      background: transparent;
+      border: solid 2px #fff;
+      min-height: 50px;
       color: #fff;
-      cursor: pointer;
+      font-size: 22px;
+    }
+    label {
+      font-size: 22px;
+      color: #fff;
+      bottom: 13px;
+      left: 10px;
+    }
+    .btn {
+      border-color: transparent;
+      background: transparent;
+      margin-top: 20px;
+      color: #fff;
+      width: 100%;
+
+      @include screen-lg() {
+        font-size: 18px;
+      }
+      @include screen-sm() {
+        width: 100%;
+      }
+      &:after {
+        background: #fff;
+      }
+      .arrow {
+        svg {
+          stroke: #fff;
+        }
+      }
+      &:hover {
+        color: $green;
+        cursor: pointer;
+        .arrow {
+          svg {
+            stroke: $green;
+          }
+        }
+      }
     }
   }
-
 }
 
 .additional-items {
@@ -306,7 +327,7 @@
     display: inline-flex;
     align-items: center;
     width: 14%;
-    @include screen-md(){
+    @include screen-md() {
       width: 100%;
     }
   }
@@ -315,17 +336,17 @@
     display: inline-flex;
     align-items: center;
 
-    @include screen-md(){
+    @include screen-md() {
       width: 19%;
     }
-    @include screen-sm(){
+    @include screen-sm() {
       width: 50%;
     }
     &__img {
       background: $ultra-light-gray;
     }
-    &__title{
-      @include screen-xl(){
+    &__title {
+      @include screen-xl() {
         font-size: 16px;
       }
     }
@@ -338,10 +359,10 @@
 }
 
 .more-models {
-padding-top: 70px;
+  padding-top: 70px;
 
-  .models-wrap{
-    padding:0;
+  .models-wrap {
+    padding: 0;
   }
 
   .model-block {
@@ -349,50 +370,53 @@ padding-top: 70px;
     font-size: 40px;
     width: 33.33%;
     margin-bottom: 0;
+    padding: 5px;
+    box-sizing: border-box;
 
-    @include screen-xl(){
+    @include screen-xl() {
       font-size: 32px;
     }
-     @include screen-lg(){
-       height: 180px;
+    @include screen-lg() {
+      height: 180px;
     }
-    @include screen-sm(){
-       height: 140px;
-       width: 50%;
+    @include screen-sm() {
+      height: 140px;
+      width: 50%;
     }
-    @include screen-xs(){
+    @include screen-xs() {
       height: 100px;
-       width: 100%;
+      width: 100%;
     }
-    &__title{
+    &__title {
       font-weight: 300;
+      margin-bottom: 0;
     }
-    &__name{
+    &__name {
       font-weight: 700;
       color: $gray;
       font-size: 1.5em;
-      @include screen-xl(){
+      @include screen-xl() {
         font-size: 1.2em;
       }
     }
 
-    &:hover{
+    &:hover {
       background: $dark-gray;
 
-      .model-block__name{
+      .model-block__name {
         color: #fff;
-        &:after{
+        &:after {
           display: none;
         }
       }
     }
   }
-  .--black{
+  .--black {
     background: $dark-gray;
   }
 
-  @include screen-sm(){
-    .model-block:nth-child(2){
+  @include screen-sm() {
+    .model-block:nth-child(2) {
       width: 100%;
     }
   }

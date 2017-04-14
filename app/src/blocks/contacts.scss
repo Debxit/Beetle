@@ -4,7 +4,7 @@
   text-align: right;
   @include screen-xs() {
     padding: 0;
-    padding-top: 50px;
+    padding-top: 20px;
   }
 }
 
@@ -50,6 +50,7 @@
 
 #map__content {
   margin: 25px;
+  margin-left: 0;
 }
 
 .callback-form {
@@ -62,42 +63,6 @@
   text-align: center;
   background: #fff;
   box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.15);
-
-
-  .btn {
-    margin-top: 40px;
-    border-color: $dark-gray;
-    color: $dark-gray;
-    background: transparent;
-    min-width: 225px;
-    font-size: 16px;
-    padding: 14px 0;
-
-    &:after {
-      background: $dark-gray;
-    }
-
-    .arrow {
-      height: 16px;
-      float: right;
-    }
-    &:hover {
-      cursor: pointer;
-      color: #fff;
-      .arrow{
-        svg{
-          stroke: #fff;
-        }
-      }
-    }
-
-    .arrow {
-      svg {
-        stroke: $dark-gray;
-      }
-    }
-  }
-
 
   @include screen-md() {
     top: auto;
@@ -117,17 +82,5 @@
     margin-bottom: 15px;
   }
 
-  .main-form {
 
-    label {
-      color: $font-light-gray;
-    }
-
-    input, textarea {
-      border-bottom: solid 1px $light-gray;
-    }
-    textarea {
-      margin-top: 20px;
-    }
-  }
 }
